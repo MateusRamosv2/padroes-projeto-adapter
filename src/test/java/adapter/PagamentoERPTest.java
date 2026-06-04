@@ -14,4 +14,14 @@ class PagamentoERPTest {
     }
 
 
+    @Test
+    void deveRetornarValorConvertidoNaAPIExterna() {
+        PagamentoERP pagamento = new PagamentoERP();
+        pagamento.registrarDespesa(50.0);
+
+
+        assertEquals(10.0, pagamento.getValorNaAPIExterna());
+    }
+
+
 }
